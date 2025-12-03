@@ -66,7 +66,8 @@ if(isset($_POST['submit'])) {
     <select name="prodi" required>
         <option value="Bisnis Digital">Bisnis Digital</option>
         <option value="Sistem Informasi">Sistem Informasi</option>
-        <option value="Teknik Komputer">Teknik Komputer</option>
+        <option value="Teknik Komputer">Teknologi Informasi</option>
+        <option value="Teknik Komputer">Sistem Komputer</option>
     </select>
     <br><br>
 
