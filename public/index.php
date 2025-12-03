@@ -2,14 +2,14 @@
 require_once "../config/database.php";
 require_once "../classes/Mahasiswa.php";
 
-
+// Koneksi DB
 $database = new Database();
 $db = $database->getConnection();
 
-
+// Buat object mahasiswa
 $mahasiswa = new Mahasiswa($db);
 
-
+// Ambil semua data
 $list = $mahasiswa->readAll();
 ?>
 
