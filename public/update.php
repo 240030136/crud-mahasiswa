@@ -2,14 +2,14 @@
 require_once "../config/database.php";
 require_once "../classes/Mahasiswa.php";
 
-// Koneksi
+
 $database = new Database();
 $db = $database->getConnection();
 
-// Object Mahasiswa
+
 $mahasiswa = new Mahasiswa($db);
 
-// Cek id
+
 if (!isset($_GET['id'])) {
     header("Location: index.php");
     exit;
@@ -20,7 +20,7 @@ $mahasiswa->readOne(); // Ambil data lama
 
 $message = "";
 
-// Update jika submit ditekan
+
 if (isset($_POST['submit'])) {
     $mahasiswa->nama = $_POST['nama'];
     $mahasiswa->nim = $_POST['nim'];
@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     $mahasiswa->angkatan = $_POST['angkatan'];
     $mahasiswa->status = $_POST['status'];
 
-    // Jika update gambar baru
+
     if ($_FILES['foto']['name']) {
         $fileName = time() . "_" . basename($_FILES['foto']['name']);
         $targetFile = "../uploads/" . $fileName;
@@ -73,7 +73,8 @@ if (isset($_POST['submit'])) {
     <select name="prodi" required>
         <option value="Bisnis Digital" <?= ($mahasiswa->prodi == 'Bisnis Digital') ? 'selected' : '' ?>>Bisnis Digital  </option>
         <option value="Sistem Informasi" <?= ($mahasiswa->prodi == 'Sistem Informasi') ? 'selected' : '' ?>>Sistem Informasi</option>
-        <option value="Teknik Komputer" <?= ($mahasiswa->prodi == 'Teknik Komputer') ? 'selected' : '' ?>>Teknik Komputer</option>
+        <option value="Teknologi Informasi" <?= ($mahasiswa->prodi == 'Teknik Informasi') ? 'selected' : '' ?>>Teknik Komputer</option>
+        <option value="Sistem Komputer" <?= ($mahasiswa->prodi == 'Sistem Komputer') ? 'selected' : '' ?>>Teknik Komputer</option>
     </select>
     <br><br>
 
