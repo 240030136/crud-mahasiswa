@@ -24,7 +24,7 @@ Aplikasi ini merupakan sistem backend sederhana untuk mengelola data mahasiswa m
   create.php<br>
   update.php<br>
   delete.php<br>
-- uploads/<br>
+- upload/<br>
   schema.sql<br>
 - README.md<br>
 
@@ -45,4 +45,5 @@ Aplikasi ini merupakan sistem backend sederhana untuk mengelola data mahasiswa m
 2. Jalankan server:
    ```sh
    php -S localhost:8000 -t public
+
 
